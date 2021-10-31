@@ -4,12 +4,12 @@ services:
   syncthing:
     image: syncthing/syncthing
     container_name: syncthing
-    hostname: my-syncthing
+    hostname: xps-9560
     environment:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /wherever/st-sync:/var/syncthing
+      - /opt/syncthing:/var/syncthing
     ports:
       - 8384:8384
       - 22000:22000/tcp
