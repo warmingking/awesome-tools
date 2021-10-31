@@ -1,0 +1,12 @@
+---
+version: "3"
+services:
+  beancount:
+    image: beancount:20211031
+    container_name: beancount
+    hostname: xps-9560
+    volumes:
+      - /opt/syncthing/beancount:/beancount
+    ports:
+      - 8184:8184
+    restart: unless-stopped
