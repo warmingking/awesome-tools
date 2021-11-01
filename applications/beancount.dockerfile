@@ -5,4 +5,4 @@ RUN apt update && apt install -y gcc && \
 
 WORKDIR /beancount
 
-CMD fava entry.beancount --host 0.0.0.0 --port 8184
+CMD fava ledger.bean --host 0.0.0.0 --port 8184
