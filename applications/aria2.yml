@@ -1,0 +1,18 @@
+---
+version: "3"
+services:
+  aria2:
+    image: p3terx/aria2-pro
+    container_name: aria2
+    hostname: xps-9560
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - RPC_PORT=6800
+      - RPC_SECRET=icefe
+    volumes:
+      - /opt/syncthing/aria2/config:/config
+      - /opt/aria2/downloads:/downloads
+    ports:
+      - 6800:6800
+    restart: unless-stopped
