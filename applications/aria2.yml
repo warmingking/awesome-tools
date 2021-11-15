@@ -11,6 +11,7 @@ services:
       - RPC_PORT=6800
       - RPC_SECRET=icefe
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - /opt/syncthing/aria2/config:/config
       - /opt/aria2/downloads:/downloads
     ports:

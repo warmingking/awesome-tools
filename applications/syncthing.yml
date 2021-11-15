@@ -10,6 +10,7 @@ services:
       - PGID=1000
     volumes:
       - /opt/syncthing:/var/syncthing
+      - /etc/localtime:/etc/localtime:ro
     ports:
       - 8384:8384
       - 22000:22000/tcp
