@@ -2,7 +2,8 @@
 version: "3"
 services:
   beancount:
-    image: beancount:20211031
+    build:
+      dockerfile: beancount.dockerfile
     container_name: beancount
     hostname: xps-9560
     volumes:
